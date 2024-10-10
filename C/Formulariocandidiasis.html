@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Enciclopedia de Salud | Formulario para la detección de indicios de candidiasis</title>
+</head>
+<body>
+    <h1>Mini Enciclopedia de Salud</h1>
+    <h1>Formulario para la detección de indicios de candidiasis</h1>
+    <nav>
+        <p>Estás en <a href="../index.html">Indice</a> &gt; <a href="c.html">Artículos que comienzan con C</a> &gt; <a href="articulocandidiasis.html">Candidiasis</a> &gt; <a href="Formulariocandidiasis.html">Formulario de detección de Candidiasis</a></p>
+    </nav>
+    <figure>
+        <a href="../index.html">
+            <img src="../logo.png" alt="Logotipo de la enciclopedia">
+        </a>
+        <figcaption>Logotipo de la enciclopedia de salud</figcaption>
+    </figure>
+    <p>Todos los campos marcados con * son obligatorios</p>
+    <form action="Formulariocandidiasisrespuesta.html" method="GET">
+
+        <label for="nombre">Nombre: *</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" pattern="[A-Za-z ]+" title="Solo se permiten letras y espacios" required><br><br>
+
+ 
+        <label for="fecha_nacimiento">Fecha de nacimiento: *</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+
+        <label for="email">Correo electrónico: *</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required><br><br>
+
+        <label for="colorenrrojecimiento">¿Qué color presenta la zona afectada?</label>
+        <input type="color" id="colorenrrojecimiento" name="color enrojecimiento" value="#ff0000"><br><br>
+
+
+        <label for="edad">Edad: *</label>
+        <input type="number" id="edad" name="edad" min="1" max="120" step="1" placeholder="Ej: 18" required><br><br>
+
+
+        <label for="nivel_dolor">Nivel de dolor (0-10): </label>
+        <input type="range" id="nivel_dolor" name="nivel_dolor" min="0" max="10" step="1" ><br><br>
+
+
+        <fieldset>
+            <legend>Sexo: *</legend>
+            <input type="radio" id="hombre" name="sexo" value="hombre" required>
+            <label for="hombre">Hombre</label><br>
+            <input type="radio" id="mujer" name="sexo" value="mujer" required>
+            <label for="mujer">Mujer</label><br>
+            <input type="radio" id="otro" name="sexo" value="otro" required>
+            <label for="otro">Otro</label>
+        </fieldset><br>
+
+        
+        <fieldset>
+            <legend>¿Has experimentado alguno de los siguientes síntomas en los últimos 15 días? *</legend>
+            <input type="checkbox" id="picazon" name="sintomas" value="picazon">
+            <label for="picazon">Picazón o ardor en áreas genitales</label><br>
+            <input type="checkbox" id="flujo" name="sintomas" value="flujo">
+            <label for="flujo">Flujo vaginal espeso y blanquecino (en mujeres)</label><br>
+            <input type="checkbox" id="irritacion" name="sintomas" value="irritacion">
+            <label for="irritacion">Irritación o enrojecimiento en la piel</label><br>
+            <input type="checkbox" id="lengua" name="sintomas" value="lengua">
+            <label for="lengua">Lengua blanca o sensación de "algodón" en la boca</label><br>
+            <input type="checkbox" id="garganta" name="sintomas" value="garganta">
+            <label for="garganta">Dificultad para tragar o molestias en la garganta</label><br>
+            <input type="checkbox" id="intestinal" name="sintomas" value="intestinal">
+            <label for="intestinal">Malestar intestinal (gases, hinchazón, diarrea o estreñimiento)</label><br>
+            <input type="checkbox" id="fatiga" name="sintomas" value="fatiga">
+            <label for="fatiga">Fatiga crónica o sensación de cansancio constante</label><br>
+            <input type="checkbox" id="orinar" name="sintomas" value="orinar">
+            <label for="orinar">Dolor o molestias al orinar</label><br>
+            <input type="checkbox" id="otros" name="sintomas" value="otros">
+            <label for="otros">Otros (especificar):</label>
+            <input type="text" name="otros_texto" id="otros_texto" placeholder="Describe otros síntomas">
+        </fieldset><br>
+
+        <fieldset>
+            <legend>¿Tienes o has tenido alguna de las siguientes condiciones médicas? *</legend>
+            <input type="checkbox" id="diabetes" name="condiciones" value="diabetes">
+            <label for="diabetes">Diabetes</label><br>
+            <input type="checkbox" id="inmunologico" name="condiciones" value="inmunologico">
+            <label for="inmunologico">Sistema inmunológico debilitado (VIH/SIDA)</label><br>
+            <input type="checkbox" id="corticoides" name="condiciones" value="corticoides">
+            <label for="corticoides">Uso reciente de corticoides o inmunosupresores</label><br>
+            <input type="checkbox" id="embarazo" name="condiciones" value="embarazo">
+            <label for="embarazo">Embarazo (en mujeres)</label><br>
+            <input type="checkbox" id="ninguna" name="condiciones" value="ninguna">
+            <label for="ninguna">Ninguna</label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>¿Consumes regularmente alimentos con alto contenido de azúcar o carbohidratos refinados? *</legend>
+            <input type="radio" id="azucar_si" name="azucar" value="si" required>
+            <label for="azucar_si">Sí</label><br>
+            <input type="radio" id="azucar_no" name="azucar" value="no" required>
+            <label for="azucar_no">No</label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>¿Sueles llevar ropa ajustada o sintética? *</legend>
+            <input type="radio" id="ropa_si" name="ropa" value="si" required>
+            <label for="ropa_si">Sí</label><br>
+            <input type="radio" id="ropa_no" name="ropa" value="no" required>
+            <label for="ropa_no">No</label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>¿Has experimentado situaciones de estrés elevado recientemente? *</legend>
+            <input type="radio" id="estres_si" name="estres" value="si" required>
+            <label for="estres_si">Sí</label><br>
+            <input type="radio" id="estres_no" name="estres" value="no" required>
+            <label for="estres_no">No</label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>¿Realizas algún tipo de higiene íntima (enjuagues vaginales, uso de jabones perfumados en el área genital)? *</legend>
+            <input type="radio" id="higiene_si" name="higiene" value="si" required>
+            <label for="higiene_si">Sí</label><br>
+            <input type="radio" id="higiene_no" name="higiene" value="no" required>
+            <label for="higiene_no">No</label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>¿Tienes una dieta rica en probióticos o tomas suplementos de probióticos? *</legend>
+            <input type="radio" id="probioticos_si" name="probioticos" value="si" required>
+            <label for="probioticos_si">Sí</label><br>
+            <input type="radio" id="probioticos_no" name="probioticos" value="no" required>
+            <label for="probioticos_no">No</label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Observaciones adicionales</legend>
+            <label for="observaciones">¿Te gustaría agregar algún comentario o síntoma adicional que no se haya mencionado? </label><br>
+            <textarea id="observaciones" name="observaciones" rows="5" cols="40" placeholder="Escribe aquí tus observaciones"></textarea><br><br>
+        </fieldset>
+
+        <input type="checkbox" id="terminos_y_condiciones" name="terminos_y_condiciones" required>
+        <label for="terminos_y_condiciones">*Acepto los términos y condiciones de uso</label><br><br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reestablecer">
+    </form>
+    <br>
+    <a href="../index.html">Volver a la página principal</a>
+    <footer>
+        <p><i>&copy; Enciclopedia de Salud. Todos los derechos reservados.</i></p>
+        <p><i>Creado por Jorge y Unai</i></p>
+    </footer>
+</body>
+</html>
