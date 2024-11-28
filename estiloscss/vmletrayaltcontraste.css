@@ -1,0 +1,43 @@
+
+@import url('estilos.css');
+
+:root {
+    --color-principal: #00574b;                /* Verde más oscuro para mayor contraste */
+    --color-principal-oscuro: #003d3b;         /* Verde más oscuro aún */
+    --color-secundario: #0A9B88;                /* Turquesa más oscuro */
+    --color-texto-principal: #000000;          /* Texto negro para máximo contraste */
+    --color-fondo: #FFFFFF;                     /* Fondo blanco para alto contraste */
+    --color-blanco: #FFFFFF;                    /* Blanco */
+    --color-gris-claro: #f0f0f0;                /* Gris muy claro */
+    --color-texto-blanco: #000000;              /* Texto negro sobre fondo blanco */
+    --color-hover: #003d3b;                     /* Verde oscuro para hover */
+    --color-hover-fondo: #00796b;               /* Fondo hover más claro */
+    --color-enlace: #00251a;                    /* Color de enlace más oscuro */
+    --color-enlace-hover: #00574b;              /* Color de enlace en hover más oscuro */
+    --color-enlace-fondo: #b2dfdb;              /* Fondo de enlace */
+    --color-enlace-hover-fondo: #e0f2f1;        /* Fondo de enlace en hover */
+    --color-negro: #000000;                     /* Negro */
+
+    /* Variables para tamaños de letra */
+    --font-size-h1: 10em;                      /* Tamaño para h1 */
+    --font-size-h2: 7.5em;                        /* Tamaño para h2 */
+    --font-size-h3: 5.75em;                     /* Tamaño para h3 */
+    --font-size-nav: 5em;                     /* Tamaño para los enlaces de navegación */
+    --font-size-paragraph: 3.1em;               /* Tamaño para los párrafos */
+
+--tamaño-imagen: 500px;
+
+    /* Variables para grosor de la fuente */
+    --font-weight-bold: 8000;                    /* Grosor más fuerte para textos destacados */
+    --font-weight-normal: 6000;                  /* Grosor normal */
+
+
+    --padding-nav: 40px;                        /* Padding para la navegación */
+    --margin-nav: 40px;                         /* Margen para la navegación */
+    --border-nav: 50px;                          /* Grosor del borde de la navegación */
+    --margin-li: 100px;                          /* Margen para los elementos de la lista */
+    --padding-a: 100px 150px; 
+
+
+}
+

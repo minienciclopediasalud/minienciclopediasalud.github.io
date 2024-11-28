@@ -1,0 +1,96 @@
+@import url('estilos.css');
+
+:root {
+    /* Variables para tamaños de letra */
+    --font-size-h1: 3em;                        /* Tamaño para h1 */
+    --font-size-h2: 2.5em;                      /* Tamaño para h2 */
+    --font-size-h3: 2em;                        /* Tamaño para h3 */
+    --font-size-nav: 1.75em;                    /* Tamaño para los enlaces de navegación */
+    --font-size-paragraph: 1.25em;              /* Tamaño para los párrafos */
+    --tamaño-imagen: 300px;                     /* Tamaño de imagen */
+
+    /* Variables para grosor de la fuente */
+    --font-weight-bold: 700;                    /* Grosor más fuerte para textos destacados */
+    --font-weight-normal: 400;                  /* Grosor normal */
+
+    /* Variables para espaciado */
+    --padding-nav: 20px;                        /* Padding para la navegación */
+    --margin-nav: 20px;                         /* Margen para la navegación */
+    --margin-li: 10px;                          /* Margen para los elementos de la lista */
+    --padding-a: 10px 15px;                     /* Padding para los enlaces */
+}
+
+/* Aplicar tamaños de fuente a los elementos */
+body {
+    font-size: var(--font-size-paragraph);
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+}
+
+nav {
+    font-size: var(--font-size-nav);
+    font-weight: var(--font-weight-normal);
+    border: none; /* Eliminar borde de la navegación */
+}
+
+p {
+    font-size: var(--font-size-paragraph);
+    font-weight: var(--font-weight-normal);
+}
+
+a {
+    font-size: var(--font-size-nav);
+    font-weight: var(--font-weight-bold);
+    padding: var(--padding-a);
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+}
+
+/* Estilo para listas */
+ul, li {
+    margin: var(--margin-li);
+    padding: 0;
+}
+
+/* Estilo para tablas */
+table {
+    width: 100%; /* Asegurarse de que la tabla ocupe el ancho completo */
+    border-collapse: collapse; /* Colapsar bordes de la tabla */
+}
+
+th, td {
+    padding: 10px; /* Espaciado interno de celdas */
+    border: 1px solid #ddd; /* Borde ligero para las celdas */
+    font-size: var(--font-size-paragraph); /* Tamaño de fuente para celdas */
+}
+
+/* Cambiar color de fondo en todas las filas de la tabla */
+tr {
+    background-color: white; /* Color de fondo por defecto */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Color de fondo al pasar el ratón */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo alternativo para filas pares */
+}
+
+/* Asegurar que todas las celdas tengan el mismo tamaño de fuente */
+tr td, tr th {
+    font-size: var(--font-size-paragraph); /* Asegurar que todas las celdas tengan el mismo tamaño de fuente */
+}

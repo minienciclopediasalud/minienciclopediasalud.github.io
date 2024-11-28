@@ -1,0 +1,191 @@
+
+/* Estilos del formulario */
+form {
+    
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alineación de etiquetas y campos de entrada */
+.label-container {
+    display: flex; /* Usar flexbox para alineación */
+    align-items: center; /* Alinear verticalmente al centro */
+    margin-bottom: 15px; /* Espacio inferior entre las filas */
+}
+
+label {
+    flex: 1; /* Tomar el espacio disponible */
+    margin-bottom: 0; /* Sin margen inferior */
+    font-weight: bold;
+    color: #004d40;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="range"],
+textarea {
+    flex: 2; /* El campo de entrada ocupará el doble de espacio que la etiqueta */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Espacio para las casillas de entrada */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="range"],
+textarea {
+    width: 100%; /* Asegura que el ancho sea del 100% */
+}
+
+/* Estilo específico para el color picker */
+input[type="color"] {
+    width: 60px; /* Ancho fijo para el selector de color */
+    height: 60px; /* Altura fija para el selector de color */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-top: 5px; /* Margen superior para separación con la etiqueta */
+    display: block; /* Cambiado a block para ocupar toda la línea */
+}
+
+/* Estilo de botones */
+input[type="submit"],
+input[type="reset"] {
+    background: #00796b;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: #004d40;
+}
+
+/* Estilo de los campos de selección */
+fieldset {
+    border: 1px solid #ddd; /* Borde gris claro, igual que los campos de texto */
+    border-radius: 5px; /* Mantiene el borde redondeado */
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #00796b; /* Mantener el color del texto del título */
+}
+
+
+
+/* Adaptabilidad */
+@media (max-width:  1200px) {
+    h1 {
+        font-size: 2em; /* Tamaño del título en pantallas pequeñas */
+    }
+
+    form {
+        padding: 15px; /* Espaciado interno reducido */
+        max-width: 90%; /* Ancho máximo reducido */
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%; /* Botones ocupan el 100% de ancho */
+        margin-bottom: 10px; /* Espaciado inferior */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em; /* Tamaño del título en pantallas muy pequeñas */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"],
+    input[type="range"],
+    textarea {
+        font-size: 14px; /* Tamaño de fuente reducido */
+    }
+}
+main nav.articulos h2 { 
+    font-size: 2em; 
+    color: #004d40; 
+    margin-bottom: 15px; 
+    text-decoration: underline; 
+}
+main nav.articulos ul { 
+    padding: 0; 
+    list-style: none; 
+}
+main nav.articulos li { 
+    margin: 10px 0; /* Espaciado vertical entre los elementos de la lista */
+}
+main nav.articulos a { 
+    background: #b2dfdb; 
+    padding: 10px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    color: #004d40; 
+    font-weight: bold; 
+    font-size: 1.2em; 
+    display: block; /* Asegura que el enlace ocupe todo el área del li */
+}
+main nav.articulos a:hover { 
+    background: #00796b; 
+    color: #fff; 
+}
+
+
+
+.icono-svg {
+    width: 40px; /* Ajusta el tamaño del icono según prefieras */
+    height: 30px;
+    margin-right: 0.5px; /* Espacio entre el icono y el texto */
+    vertical-align: middle;
+}
+
+/* Estilo de Tablas */
+table {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    border-collapse: collapse; /* Elimina los espacios entre bordes */
+    margin: 20px 0; /* Espacio alrededor de la tabla */
+}
+
+th, td {
+    padding: 12px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto a la izquierda */
+    border: 1px solid #ddd; /* Borde ligero */
+}
+
+th {
+    background-color: #00796b; /* Color de fondo para los encabezados */
+    color: white; /* Color de texto blanco */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo para filas pares */
+}
+
+tr:hover {
+    background-color: #e0f2f1; /* Color de fondo al pasar el ratón */
+}
+
+caption {
+    font-weight: bold; /* Texto en negrita para el título de la tabla */
+    margin: 10px; /* Espacio alrededor del título */
+    font-size: 1.2em; /* Tamaño del texto */
+    color: #004d40; /* Color del título */
+}

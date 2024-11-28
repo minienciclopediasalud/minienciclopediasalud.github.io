@@ -1,0 +1,30 @@
+@import url('estilos.css');
+
+:root {
+    --color-principal: #004237;                /* Verde más oscuro para mayor contraste */
+    --color-principal-oscuro: #002f2e;         /* Verde más oscuro aún para mejor contraste */
+    --color-secundario: #00867c;               /* Turquesa más oscuro */
+    --color-texto-principal: #000000;          /* Mantengo el texto negro para máximo contraste */
+    --color-fondo: #FFFFFF;                    /* Fondo blanco para alto contraste */
+    --color-blanco: #FFFFFF;                   /* Blanco */
+    --color-gris-claro: #e6e6e6;               /* Gris claro más oscuro para mayor contraste */
+    --color-texto-blanco: #000000;             /* Mantengo el texto negro sobre fondo blanco */
+    --color-hover: #002f2e;                    /* Verde oscuro para hover más contrastado */
+    --color-hover-fondo: #006259;              /* Fondo hover más claro y contrastado */
+    --color-enlace: #000000;                   /* Color de enlace más oscuro para mayor contraste */
+    --color-enlace-hover: #004237;             /* Color de enlace en hover más oscuro */
+    --color-enlace-fondo: #99cfc7;             /* Fondo de enlace más contrastado */
+    --color-enlace-hover-fondo: #d9ebe9;       /* Fondo de enlace en hover más claro */
+    --color-negro: #000000;                    /* Negro */
+    
+    /* Variables para tamaños de letra */
+    --font-size-h1: 2.5em;                     /* Sin cambios */
+    --font-size-h2: 2em;                       /* Sin cambios */
+    --font-size-h3: 1.75em;                    /* Sin cambios */
+    --font-size-nav: 1.2em;                    /* Sin cambios */
+    --font-size-paragraph: 1.1em;              /* Sin cambios */
+    
+    /* Variables para grosor de la fuente */
+    --font-weight-bold: 700;                   /* Sin cambios */
+    --font-weight-normal: 400;                 /* Sin cambios */
+}

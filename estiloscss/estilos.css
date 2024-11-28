@@ -1,0 +1,746 @@
+/* Variables Globales */
+:root {
+    --color-principal: #00796b;                /* Verde principal */
+    --color-principal-oscuro: #004d40;         /* Verde oscuro */
+    --color-secundario: #0FCCB6;                /* Turquesa claro */
+    --color-texto-principal: #333;              /* Texto principal */
+    --color-fondo: #f4f7f6;                     /* Fondo claro */
+    --color-blanco: #fff;                       /* Blanco */
+    --color-gris-claro: #e0f2f1;                /* Gris claro */
+    --color-texto-blanco: #e0f2f1;              /* Texto blanco */
+    --color-hover: #00796b;                     /* Hover */
+    --color-hover-fondo: #004d40;               /* Fondo hover */
+    --color-enlace: #004d40;                    /* Color de enlace */
+    --color-enlace-hover: #00796b;              /* Color de enlace en hover */
+    --color-enlace-fondo: #b2dfdb;              /* Fondo de enlace */
+    --color-enlace-hover-fondo: #e0f2f1;        /* Fondo de enlace en hover */
+    --color-negro: #383838;                     /* Negro */
+
+    /* Variables para tamaños de letra */
+    --font-size-h1: 2.5em;                      /* Tamaño para h1 */
+    --font-size-h2: 2em;                        /* Tamaño para h2 */
+    --font-size-h3: 1.75em;                     /* Tamaño para h3 */
+    --font-size-nav: 1.2em;                     /* Tamaño para los enlaces de navegación */
+    --font-size-paragraph: 1.1em;               /* Tamaño para los párrafos */
+
+    --tamaño-imagen: 150px;
+  
+    /* Variables para grosor de la fuente */
+    --font-weight-bold: 600;                    /* Grosor para textos destacados */
+    --font-weight-normal: 400;                  /* Grosor normal */
+}
+
+/* Estilos Globales */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+body { 
+    font-family: 'Helvetica Neue', Arial, sans-serif; 
+    background: var(--color-fondo); 
+    color: var(--color-texto-principal); 
+    line-height: 1.6; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+}
+
+h1, h2, h3 { 
+    font-weight: var(--font-weight-bold); /* Usar la variable para el grosor de la fuente */
+}
+
+h1 { 
+    font-size: var(--font-size-h1); 
+}
+
+h2 { 
+    font-size: var(--font-size-h2); 
+}
+
+h3 { 
+    font-size: var(--font-size-h3); 
+}
+
+/* Encabezado */
+header { 
+    background: var(--color-principal); 
+    color: var(--color-blanco); 
+    padding: 20px; 
+    border-bottom: 5px solid var(--color-principal-oscuro); 
+}
+
+.horizontal {
+    overflow: hidden; /* Asegurarse de que el contenedor contenga sus hijos flotantes */
+}
+
+.horizontal img {
+    float: left; /* Flotar imagen a la izquierda */
+    width: var(--tamaño-imagen); 
+    border-radius: 50%; 
+    margin-right: 20px; /* Espacio a la derecha de la imagen */
+}
+header img { 
+    width: var(--tamaño-imagen); ; 
+    border-radius: 50%; 
+}
+header figcaption, header p { 
+    color: var(--color-gris-claro); 
+}
+
+
+header div { 
+    overflow: hidden;  /* Para que el texto fluya bien alrededor de la imagen */
+}
+
+header h1 { 
+    font-size: var(--font-size-h1); 
+    margin: 10px 0; 
+    margin-top: 35px;
+    
+}
+
+header nav { 
+    margin: 15px 0; 
+}
+
+header nav a { 
+    color: var(--color-blanco); 
+    font-size: var(--font-size-nav); 
+    text-decoration: none; 
+    font-weight: var(--font-weight-bold); 
+    padding: 5px 10px; 
+}
+
+header nav a:hover { 
+    background: var(--color-principal-oscuro); 
+    border-radius: 5px; 
+}
+
+header nav a:focus { 
+    outline: 2px solid var(--color-blanco); /* Resaltar el borde del enlace */
+    background: var(--color-principal-oscuro); /* Fondo cuando está en foco */
+}
+
+
+
+/* Ajustes de responsive para header */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;          /* En pantallas pequeñas, apilar los elementos */
+        align-items: center;             /* Centrar elementos en pantallas pequeñas */
+    }
+    header figure {
+        margin-bottom: 20px;             /* Añadir espacio debajo de la imagen */
+    }
+}
+
+/* Estilos para las migas de pan */
+nav.migaspan {
+    background: var(--color-secundario);   /* Color de fondo */
+    padding: 10px;                        /* Espacio interior */
+    border-radius: 5px;                   /* Bordes redondeados */
+
+}
+
+nav.migaspan p {
+    margin: 0;                            /* Sin margen */
+    color: var(--color-negro);            /* Color del texto */
+    font-size: var(--font-size-paragraph); /* Tamaño del texto */
+}
+
+nav.migaspan a {
+    color: var(--color-enlace);           /* Color del enlace */
+    text-decoration: none;                 /* Sin subrayado */
+    font-weight: var(--font-weight-bold);  /* Grosor del texto */
+}
+
+nav.migaspan a:hover {
+    color: var(--color-enlace-hover);      /* Color del enlace en hover */
+    text-decoration: underline;            /* Subrayar el enlace en hover */
+}
+
+
+/* Índice */
+nav#indice { 
+    background: var(--color-secundario);
+    padding: 20px;
+    color: var(--color-negro);
+    border-bottom: 5px solid var(--color-principal-oscuro); 
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+nav#indice h2 { 
+    text-decoration: underline; 
+}
+
+nav#indice ul { 
+    list-style: none; 
+    padding: 0; 
+    overflow: hidden; /* Para contener los elementos flotantes */
+}
+
+nav#indice li { 
+    float: left; /* Flotar a la izquierda */
+    margin: 10px; 
+}
+
+nav#indice a { 
+    font-weight: var(--font-weight-bold); 
+    color: var(--color-negro); 
+    padding: 10px 15px; 
+    display: block; 
+    border-radius: 5px; 
+    background: var(--color-secundario); 
+    font-size: var(--font-size-paragraph);
+}
+
+nav#indice a:hover { 
+    background: var(--color-blanco); 
+}
+nav#indice a:focus { 
+    outline: 2px solid var(--color-principal); /* Resaltar el borde del enlace */
+    background: var(--color-gris-claro); /* Cambiar el fondo */
+}
+
+/* Estilos para el nav con la clase az */
+nav#az { 
+    padding: 20px; 
+    margin: 20px auto; 
+    max-width: 1300px;
+}
+
+nav#az h2 { 
+    font-size: var(--font-size-h2); 
+    color: var(--color-principal-oscuro); 
+    margin-bottom: 15px; 
+}
+
+nav#az ul { 
+    list-style: none; 
+    padding: 0; 
+    overflow: hidden; /* Para contener los elementos flotantes */
+}
+
+nav#az ul li { 
+    float: left; /* Flotar a la izquierda */
+    background: var(--color-gris-claro); 
+    padding: 10px; 
+    text-align: center; 
+    border-radius: 8px; 
+    margin: 9px; 
+}
+
+nav#az ul li a { 
+    text-decoration: none; 
+    color: var(--color-principal-oscuro); 
+    font-weight: var(--font-weight-bold); 
+    font-size: var(--font-size-nav); 
+}
+
+nav#az ul li a:hover { 
+    background: var(--color-principal); 
+    color: var(--color-blanco); 
+}
+
+nav#az ul li a:focus { 
+    outline: 2px solid var(--color-principal); /* Resaltar el borde del enlace */
+    background: var(--color-gris-claro); /* Cambiar el fondo */
+}
+
+
+/* Contenido Principal */
+/* Estilos generales para cualquier <main> sin la clase columnasdivididas */
+main { 
+    padding: 20px; 
+    margin: 20px auto; 
+    max-width: 1200px; 
+}
+
+/* Estilos específicos para <main> con la clase columnasdivididas */
+main.columnasdivididas { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+/* Estilos para las secciones y nav dentro de <main> con la clase columnasdivididas */
+main.columnasdivididas > section, 
+main.columnasdivididas > nav {
+    flex: 1 1 calc(50% - 20px); /* Dividir el contenido en columnas */
+    margin: 10px; /* Margen para las columnas */
+}
+
+/* Estilos generales para <nav> y <section> sin la clase columnasdivididas */
+main > nav,
+main > section {
+    width: 100%; /* Asegura que ocupen toda la anchura */
+}
+/* Estilos generales para <nav> dentro de <main> */
+main nav h2 { 
+    font-size: var(--font-size-h2); 
+    color: var(--color-principal-oscuro); 
+    margin-bottom: 15px; 
+    text-decoration: underline; 
+}
+
+main nav ul { 
+    padding: 0; 
+    list-style: none; 
+}
+
+main nav li { 
+    margin: 10px 0; 
+}
+
+main nav a { 
+    background: var(--color-gris-claro); 
+    padding: 10px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    color: var(--color-principal-oscuro); 
+    font-weight: var(--font-weight-bold); 
+    font-size: var(--font-size-nav); 
+    display: block; 
+    font-size: var(--font-size-paragraph);
+}
+
+main nav a:hover { 
+    background: var(--color-principal); 
+    color: var(--color-blanco); 
+}
+
+main nav a:focus { 
+    outline: 2px solid var(--color-principal); /* Resaltar el borde del enlace */
+    background: var(--color-gris-claro); /* Cambiar el fondo */
+}
+/* Estilos generales para <nav> y <section> con la clase normal */
+main > nav.normal,
+main > section.normal {
+    width: 100%; /* Asegura que ocupen toda la anchura */
+}
+
+
+/* Estilos generales para <section> dentro de <main> */
+main section ul { 
+    list-style: none; 
+    padding: 0; 
+}
+
+main section ul li { 
+    background: var(--color-gris-claro); 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    border-radius: 8px; 
+}
+
+main section ul li a { 
+    font-weight: var(--font-weight-bold); 
+    color: var(--color-principal-oscuro); 
+}
+
+main section ul li a:hover, 
+main section a:hover { 
+    color: var(--color-principal); 
+    text-decoration: underline; 
+}
+
+main section p { 
+    font-size: var(--font-size-paragraph); 
+    margin-bottom: 20px;
+    max-width: 70ch;
+}
+
+
+/* Estilos para el nav en el main */
+
+
+main.columnasdivididas section ul { 
+    list-style: none; 
+    padding: 0; 
+}
+
+main.columnasdivididas section ul li { 
+    background: var(--color-gris-claro); 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    border-radius: 8px; 
+}
+
+main.columnasdivididas section nav ul li a { 
+    font-weight: var(--font-weight-bold); 
+    color: var(--color-principal-oscuro); 
+}
+
+main.columnasdivididas section nav ul li a:hover, 
+main.columnasdivididas section a:hover { 
+    color: var(--color-principal); 
+    text-decoration: underline; 
+}
+
+main.columnasdivididas section p { 
+    font-size: var(--font-size-paragraph); 
+    margin-bottom: 20px;
+}
+/* Estilos generales para <nav>  con la clase normal */
+nav.normal {
+    max-width: 1200px;       /* Ancho máximo */
+    margin: 0 auto;          /* Centra el elemento nav */
+    text-align: center;       /* Centra el texto dentro de nav */
+    margin-bottom: 20px;
+}
+
+nav.normal h2 { 
+    font-size: var(--font-size-h2); 
+    color: var(--color-principal-oscuro); 
+    margin-bottom: 15px;      /* Espacio debajo del título */
+    text-decoration: underline; 
+}
+
+nav.normal ul { 
+    padding: 0; 
+    list-style: none; 
+    text-align: center;       /* Centra la lista */
+}
+
+nav.normal li { 
+    margin: 10px 0; 
+}
+
+nav.normal a { 
+    background: var(--color-gris-claro); 
+    padding: 10px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    color: var(--color-principal-oscuro); 
+    font-weight: var(--font-weight-bold); 
+    font-size: var(--font-size-nav); 
+    display: block; 
+    width: 100%;              /* Asegura que el enlace ocupe todo el ancho de su contenedor */
+    max-width: 400px;        /* Ancho máximo del enlace (ajusta según sea necesario) */
+    margin: 0 auto;          /* Centra el enlace */
+}
+
+nav.normal a:hover { 
+    background: var(--color-principal); 
+    color: var(--color-blanco); 
+}
+
+nav.normal a:focus { 
+    outline: 2px solid var(--color-principal); /* Resaltar el borde del enlace */
+    background: var(--color-gris-claro); /* Cambiar el fondo */
+}
+
+
+/* Pie de Página */
+footer { 
+    background: var(--color-principal); 
+    color: var(--color-gris-claro); 
+    padding: 20px; 
+    border-top: 5px solid var(--color-principal-oscuro); 
+    margin-top: auto; 
+    display: flex; /* Flexbox para disposición horizontal */
+    flex-direction: column; /* Comienza con disposición en columna */
+    align-items: center; /* Centra los elementos por defecto */
+    gap: 10px; /* Espaciado entre elementos */
+    
+}
+
+/* Contenedor para contacto y declaración */
+footer .contenedor-secciones {
+    display: flex; /* Disposición horizontal para contacto y declaración */
+    justify-content: space-between; /* Espacio entre los dos elementos */
+    width: 100%; /* Ocupa todo el ancho del footer */
+}
+
+/* Sección de contacto alineada a la izquierda */
+footer #contacto {
+    text-align: left;
+    margin-left: 20px; /* Separación del borde izquierdo */
+    font-size: var(--font-size-nav); 
+}
+
+/* Declaración alineada completamente a la derecha */
+footer #declaracion {
+    text-align: right;
+    margin-right: 20px; /* Separación del borde derecho */
+    font-size: var(--font-size-nav); 
+}
+
+/* Estilo para las listas del footer */
+footer ul {
+    list-style: none; /* Sin puntos en la lista */
+    margin: 0; 
+    padding: 0;
+}
+
+/* Personalización de los enlaces */
+footer a {
+    color: var(--color-blanco); /* Cambiar el color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+/* Texto de copyright centrado en la parte inferior */
+footer p {
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+}
+
+
+/* Media Queries para ajustar el max-width y columnas */
+@media (min-width: 1600px) {
+    nav#indice, nav#az, main {
+        max-width: 1600px; /* Aumentar max-width para pantallas más grandes */
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+    nav#indice, nav#az, main {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    nav#indice, nav#az, main {
+        max-width: 1300px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    nav#indice, nav#az, main {
+        max-width: 1000px;
+    }
+    main > section, main > nav {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    nav#indice, nav#az, main {
+        max-width: 800px; /* Pantallas tablet */
+    }
+    main > section, main > nav {
+        flex: 1 1 100%; /* Una sola columna en pantallas no tan pequeñas */
+    }
+}
+
+@media (max-width: 767px) {
+    nav#indice, nav#az, main {
+        max-width: 100%; /* Pantallas pequeñas: ocupar todo el ancho */
+    }
+    main > section, main > nav {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+/* FORMULARIO Y TABLAS */
+
+/* Estilos del formulario */
+form {
+    padding: 20px;
+    background: var(--color-blanco);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alineación de etiquetas y campos de entrada */
+.label-container {
+    display: flex; /* Usar flexbox para alineación */
+    align-items: center; /* Alinear verticalmente al centro */
+    margin-bottom: 15px; /* Espacio inferior entre las filas */
+}
+
+label {
+    flex: 1; /* Tomar el espacio disponible */
+    margin-bottom: 0; /* Sin margen inferior */
+    font-weight: var(--font-weight-bold);
+    color: var(--color-principal-oscuro);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="range"],
+textarea {
+    flex: 2; /* El campo de entrada ocupará el doble de espacio que la etiqueta */
+    padding: 10px;
+    border: 1px solid var(--color-gris-claro); /* Usar variable para el borde */
+    border-radius: 4px;
+    font-size: var(--font-size-paragraph); /* Usar variable para el tamaño de fuente */
+}
+
+/* Espacio para las casillas de entrada */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="range"],
+textarea {
+    width: 100%; /* Asegura que el ancho sea del 100% */
+}
+
+/* Estilo específico para el color picker */
+input[type="color"] {
+    width: 60px; /* Ancho fijo para el selector de color */
+    height: 60px; /* Altura fija para el selector de color */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-top: 5px; /* Margen superior para separación con la etiqueta */
+    display: block; /* Cambiado a block para ocupar toda la línea */
+}
+
+/* Estilo de botones */
+input[type="submit"],
+input[type="reset"] {
+    background: var(--color-principal);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--font-size-paragraph); /* Usar variable para el tamaño de fuente */
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background: var(--color-hover-fondo);
+}
+
+/* Estilo de los campos de selección */
+fieldset {
+    border: 1px solid var(--color-gris-claro); /* Usar variable para el borde */
+    border-radius: 5px; /* Mantiene el borde redondeado */
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-principal); /* Mantener el color del texto del título */
+}
+
+/* Adaptabilidad */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: var(--font-size-h1); /* Tamaño del título en pantallas pequeñas */
+    }
+
+    form {
+        padding: 15px; /* Espaciado interno reducido */
+        max-width: 90%; /* Ancho máximo reducido */
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%; /* Botones ocupan el 100% de ancho */
+        margin-bottom: 10px; /* Espaciado inferior */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em; /* Tamaño del título en pantallas muy pequeñas */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"],
+    input[type="range"],
+    textarea {
+        font-size: var(--font-size-paragraph); /* Tamaño de fuente reducido */
+    }
+}
+
+main nav.articulos h2 { 
+    font-size: var(--font-size-h2); /* Usar variable para el tamaño de fuente */
+    color: var(--color-principal-oscuro); 
+    margin-bottom: 15px; 
+    text-decoration: underline; 
+}
+
+main nav.articulos ul { 
+    padding: 0; 
+    list-style: none; 
+}
+
+main nav.articulos li { 
+    margin: 10px 0; /* Espaciado vertical entre los elementos de la lista */
+}
+
+main nav.articulos a { 
+    background: var(--color-enlace-fondo); 
+    padding: 10px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    color: var(--color-enlace); 
+    font-weight: var(--font-weight-bold); 
+    font-size: var(--font-size-nav); /* Usar variable para el tamaño de fuente */
+    display: block; /* Asegura que el enlace ocupe todo el área del li */
+}
+
+main nav.articulos a:hover { 
+    background: var(--color-hover); 
+    color: var(--color-blanco); 
+}
+
+.icono-svg {
+    width: 40px; /* Ajusta el tamaño del icono según prefieras */
+    height: 30px;
+    margin-right: 0.5px; /* Espacio entre el icono y el texto */
+    vertical-align: middle;
+}
+
+/* Estilo de Tablas */
+table {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    border-collapse: collapse; /* Elimina los espacios entre bordes */
+    margin: 20px 0; /* Espacio alrededor de la tabla */
+}
+
+th, td {
+    padding: 12px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto a la izquierda */
+    border: 1px solid var(--color-gris-claro); /* Usar variable para el borde */
+    
+    
+}
+
+th {
+    background-color: var(--color-principal); /* Color de fondo para los encabezados */
+    color: var(--color-blanco); /* Color de texto blanco */
+    font-size: var(--font-size-nav); /* Tamaño del texto */
+    
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-gris-claro); /* Color de fondo para filas pares */
+    font-size: var(--font-size-nav); /* Tamaño del texto */
+}
+tr:nth-child(odd) {
+    background-color: var(--color-gris-oscuro); /* Color de fondo para filas impares */
+    font-size: var(--font-size-nav); /* Tamaño del texto */
+}
+
+tr:hover {
+    background-color: var(--color-blanco); /* Color de fondo al pasar el ratón */
+    font-size: var(--font-size-nav); /* Tamaño del texto */
+}
+
+caption {
+    font-weight: var(--font-weight-bold); /* Texto en negrita para el título de la tabla */
+    margin: 10px; /* Espacio alrededor del título */
+    font-size: var(--font-size-nav); /* Tamaño del texto */
+    color: var(--color-principal-oscuro); /* Color del título */
+}

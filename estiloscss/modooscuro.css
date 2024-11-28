@@ -1,0 +1,32 @@
+@import url('estilos.css');
+
+:root {
+    --color-principal: #00d4b1;                 /* Verde más oscuro */
+    --color-principal-oscuro: #e4e4e4;          /* Verde aún más oscuro */
+    --color-secundario: #008376;                /* Turquesa menos brillante */
+    --color-texto-principal: #ffffff;           /* Texto blanco puro */
+    --color-fondo: #000000;                     /* Fondo negro puro */
+    --color-blanco: #1e1e1e;                    /* Fondo para elementos "blancos" */
+    --color-gris-claro: #333;                   /* Gris para bordes */
+    --color-texto-blanco: #ffffff;              /* Texto blanco claro */
+    --color-hover: #f5f5f5;                     /* Rojo oscuro para hover */
+    --color-hover-fondo: #004d40;               /* Fondo oscuro para hover */
+    --color-enlace: #fcfefe;                    /* Enlace más oscuro para mejor contraste */
+    --color-enlace-hover: #045f56;              /* Hover del enlace más oscuro */
+    --color-enlace-fondo: #383838;              /* Fondo de enlace en modo oscuro */
+    --color-enlace-hover-fondo: #333;           /* Fondo de enlace en hover */
+    --color-negro: #fffcfc;                     /* Texto claro */
+}
+
+.image {
+    width: 300px; /* Ajusta según sea necesario */
+    height: auto; /* Mantiene la proporción */
+    transition: filter 0.3s ease; /* Transición suave */
+}
+
+/* Para el modo oscuro */
+@media (prefers-color-scheme: dark) {
+    .image {
+        filter: invert(1); /* Invertir colores */
+    }
+}

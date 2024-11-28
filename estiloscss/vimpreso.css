@@ -1,0 +1,74 @@
+/* Estilos generales */
+@media print {
+    @page {
+        margin: 1in; /* Márgenes de la página */
+    }
+
+    body {
+        font-family: serif; /* Tipo de letra serif */
+        background: white; /* Fondo blanco */
+        color: black; /* Texto negro */
+        margin: 0; /* Sin márgenes en la impresión */
+        padding: 0; /* Sin padding en la impresión */
+        font-size: 12pt; /* Tamaño de fuente mínimo */
+    }
+
+    /* Ajustes para evitar viudas y huérfanas */
+    p, h1, h2, h3, h4, h5, h6 {
+        orphans: 3; /* Evita que haya menos de 3 líneas al final de un bloque */
+        widows: 3; /* Evita que haya menos de 3 líneas al comienzo de un bloque */
+    }
+
+    /* Eliminación de elementos no esenciales */
+    nav, aside, .no-print, img, video, iframe, .dynamic-content, form, #video {
+        display: none !important; /* Ocultar imágenes, videos, iframe y la sección de video completa */
+    }
+
+    /* Estilo de enlaces */
+    a {
+        color: blue; /* Color de enlace diferente */
+        text-decoration: underline; /* Subrayado para los enlaces */
+    }
+
+    /* Mostrar el URL de los enlaces */
+    a::after {
+        content: " (" attr(href) ")"; /* Muestra el URL después del texto del enlace */
+        font-size: 10pt; /* Tamaño de fuente más pequeño para el URL */
+        color: gray; /* Color gris para los URLs */
+    }
+
+    /* Estilos para encabezados */
+    h1, h2, h3, h4 {
+        page-break-after: avoid; /* Evitar saltos de página después de encabezados */
+        margin: 0; /* Sin márgenes en encabezados */
+        padding: 0; /* Sin padding en encabezados */
+    }
+
+    /* Estilo para párrafos */
+    p {
+        margin: 0 0 10px; /* Espaciado entre párrafos */
+    }
+
+    /* Incluir URL de la página */
+    footer::after {
+        content: "URL: " attr(data-url); /* URL de la página */
+        display: block;
+        font-size: 10pt; /* Tamaño más pequeño para la URL */
+        margin-top: 10px;
+    }
+
+    /* Aviso de derechos de uso */
+    footer::before {
+        content: "© " attr(data-copyright); /* Aviso de derechos de uso */
+        display: block;
+        font-size: 10pt; /* Tamaño más pequeño para el aviso */
+        margin-bottom: 10px;
+        text-align: center; /* Centrar el aviso */
+    }
+
+    /* Agregar separación entre elementos */
+    hr {
+        border: 1px solid black; /* Línea horizontal entre secciones */
+        margin: 20px 0; /* Margen superior e inferior */
+    }
+}

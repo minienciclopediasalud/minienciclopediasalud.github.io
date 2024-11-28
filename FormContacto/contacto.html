@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Enciclopedia de Salud | Formulario de Contacto</title>
+    <link href="../estiloscss/estilos.css" rel="stylesheet" title="Predeterminado">
+    <link href="../estiloscss/modooscuro.css" rel="alternate stylesheet" title="Modo Noche">
+    <link href="../estiloscss/vimpreso.css" rel="stylesheet" media="print">
+    <link href="../estiloscss/vmayorletra.css" rel="alternate stylesheet" title="Letra Más Grande">
+    <link href="../estiloscss/valtocontraste.css" rel="alternate stylesheet" title="Alto Contraste">
+    <link href="../estiloscss/vmletrayaltcontraste.css" rel="alternate stylesheet" title="Alto Contraste y Letra Más Grande">
+
+</head>
+<body>
+    <header class="horizontal">
+        <figure>
+            <a href="../index.html">
+                <img src="../logo.png" alt="Logotipo de la enciclopedia" class="image">
+            </a>
+        </figure>
+        <h1>Mini Enciclopedia de Salud | Contacto</h1>
+ 
+        
+    </header>
+    <nav class="migaspan">
+        <p>Estás en <a href="../index.html">Índice</a> &gt; <a href="contacto.html">Página de Contacto</a></p>
+    </nav>
+    
+    <main>
+
+        <div class="form-container">
+            <form action="contactoRespuesta.html" method="GET">
+                <div class="label-container">
+                    <label for="asunto">Asunto: * (Todos los campos marcados con * son obligatorios)</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Escribe aquí el asunto" required>
+                </div>
+
+                <div class="label-container">
+                    <label for="comentario">Comentario o pregunta: *</label><br>
+                    <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="Escribe aquí tus dudas" required></textarea>
+                </div>
+
+                <div class="label-container">
+                    <label for="yo_soy">Yo soy: </label>
+                    <select id="yo_soy" name="yo_soy">
+                        <option value="paciente">Paciente</option>
+                        <option value="cientifico">Científico</option>
+                        <option value="medico">Médico</option>
+                        <option value="educador">Educador</option>
+                        <option value="fabricante">Fabricante</option>
+                        <option value="periodista">Periodista</option>
+                    </select>
+                </div>
+
+                <div class="label-container">
+                    <label for="fecha_nacimiento">
+                        <img src="../assets/iconos/calendarioylapiz.svg" alt="Icono de calendario" class="icono-svg">
+                        Fecha de nacimiento: *
+                    </label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                </div>
+
+                <fieldset>
+                    <legend>Sexo: *</legend>
+                    <div class="label-container">
+                        <input type="radio" id="hombre" name="sexo" value="hombre" required>
+                        <label for="hombre">
+                            Hombre
+                            <img src="../assets/iconos/male.svg" alt="Icono de hombre" class="icono-svg">
+                        </label>
+                    </div>
+                    <div class="label-container">
+                        <input type="radio" id="mujer" name="sexo" value="mujer" required>
+                        <label for="mujer">Mujer
+                            <img src="../assets/iconos/female.svg" alt="Icono de mujer" class="icono-svg">
+                        </label>
+                    </div>
+                    <div class="label-container">
+                        <input type="radio" id="otro" name="sexo" value="otro" required>
+                        <label for="otro">Otro</label>
+                    </div>
+                </fieldset>
+
+                <div class="label-container">
+                    <label for="email">
+                        <img src="../assets/iconos/mail.svg" alt="Icono de correo" class="icono-svg">
+                        Correo electrónico: *
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                
+
+                <div class="label-container">
+                    <input type="checkbox" id="mas_informacion" name="mas_informacion">
+                    <label for="mas_informacion">Deseo recibir más información</label>
+                </div>
+
+                <div class="label-container">
+                    <input type="checkbox" id="terminos_y_condiciones" name="terminos_y_condiciones" required>
+                    <label for="terminos_y_condiciones">*Acepto los términos y condiciones de uso</label>
+                </div>
+
+                <div class="button-container">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Reestablecer">
+                </div>
+            </form>
+        </div>
+
+        <br>
+        </main>
+        <main class="main">
+       
+    </main>
+    <nav class="normal"><a href="../index.html">Volver a la página principal</a> </nav>
+    <footer>
+        <div class="contenedor-secciones">
+          <section id="contacto">
+            <ul>
+              <li><a href="../FormContacto/contacto.html">Formulario de Contacto<img src="../assets/iconos/siluetaconcalendariodetras.svg" alt="Icono de calendario" class="icono-svg"></a></li>
+            </ul>
+          </section>
+          <section id="declaracion">
+            <ul>
+              <li><a href="../declaracionacc/declaracionaccesibilidad.html">Declaración de Accesibilidad</a></li>
+            </ul>
+          </section>
+        </div>
+        <p><i>&copy; Enciclopedia de Salud. Todos los derechos reservados.</i></p>
+        <p><i>Creado por Jorge y Unai</i></p>
+      </footer>
+</body>
+</html>
